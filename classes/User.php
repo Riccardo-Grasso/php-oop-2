@@ -6,6 +6,14 @@ class User
     protected $lastName;
     protected $mail;
     protected $address;
+    protected $accountType = "basic";
+    protected $cart = [];
+
+    function __construct(string $name, string $lastName)
+    {
+        $this->setName($name);
+        $this->setLastName($lastName);
+    }
 
     /* GETTER E SETTER NAME */
     protected function setName($newName)
@@ -61,5 +69,12 @@ class User
     protected function getAddress()
     {
         return $this->address;
+    }
+
+    /* FUNZIONI */
+
+    public function getUserCompleteName()
+    {
+        return $this->name . " " . $this->lastName;
     }
 }
