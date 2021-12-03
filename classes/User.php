@@ -6,8 +6,8 @@ class User
     protected $lastName;
     protected $mail;
     protected $address;
-    protected $accountType = "basic";
-    protected $cart = [];
+    protected $accountType;
+    /*protected $cart = []; */
 
     function __construct(string $name, string $lastName)
     {
@@ -16,7 +16,7 @@ class User
     }
 
     /* GETTER E SETTER NAME */
-    protected function setName($newName)
+    public function setName($newName)
     {
         if (is_null($newName)) {
             return;
@@ -24,13 +24,13 @@ class User
         $this->name = $newName;
     }
 
-    protected function getName()
+    public function getName()
     {
         return $this->name;
     }
 
     /* GETTER E SETTER LASTNAME */
-    protected function setLastName($newLastName)
+    public function setLastName($newLastName)
     {
         if (is_null($newLastName)) {
             return;
@@ -38,13 +38,13 @@ class User
         $this->lastName = $newLastName;
     }
 
-    protected function getLastName()
+    public function getLastName()
     {
         return $this->lastName;
     }
 
     /* GETTER E SETTER MAIL */
-    protected function setMail($newMail)
+    public function setMail($newMail)
     {
         if (is_null($newMail)) {
             return;
@@ -52,13 +52,13 @@ class User
         $this->mail = $newMail;
     }
 
-    protected function getMail()
+    public function getMail()
     {
         return $this->mail;
     }
 
     /* GETTER E SETTER ADDRESS */
-    protected function setAddress($newAddress)
+    public function setAddress($newAddress)
     {
         if (is_null($newAddress)) {
             return;
@@ -66,11 +66,24 @@ class User
         $this->address = $newAddress;
     }
 
-    protected function getAddress()
+    public function getAddress()
     {
         return $this->address;
     }
 
+    /* ACCOUNT TYPE */
+    public function setAccountType($newAccountType)
+    {
+        if (is_null($newAccountType)) {
+            return;
+        }
+        $this->accountType = $newAccountType;
+    }
+
+    public function getAccountType()
+    {
+        return $this->accountType;
+    }
     /* FUNZIONI */
 
     public function getUserCompleteName()
