@@ -1,6 +1,7 @@
 <?php
 class Product
 {
+    protected $productTypology = "";
     protected $productName = "";
     protected $productPrice = "";
 
@@ -9,6 +10,22 @@ class Product
     {
         $this->setProductName($productName);
     }
+
+    /* SETTER E GETTER PRODUCTYPOLOGY */
+    public function setProductTypology($newProductTypology)
+    {
+        if (is_null($newProductTypology)) {
+            return;
+        }
+        $this->productTypology = $newProductTypology;
+    }
+
+    public function getProductTypology()
+    {
+        return $this->productTypology;
+    }
+
+
     /* SETTER E GETTER PRODUCTNAME */
     public function setProductName($newProductName)
     {

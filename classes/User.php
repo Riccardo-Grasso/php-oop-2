@@ -7,7 +7,7 @@ class User
     protected $mail;
     protected $address;
     protected $accountType;
-    /*protected $cart = []; */
+    protected $cart = [];
 
     function __construct(string $name, string $lastName)
     {
@@ -71,6 +71,23 @@ class User
         return $this->address;
     }
 
+    /* GETTER E SETTER CART*/
+    public function setCart($newCart)
+    {
+        if (is_null($newCart)) {
+            return;
+        }
+        $this->cart = $newCart;
+    }
+
+    public function getCart()
+    {
+
+        return $this->cart;
+    }
+
+
+    /*************/
     /* ACCOUNT TYPE */
     public function setAccountType($newAccountType)
     {

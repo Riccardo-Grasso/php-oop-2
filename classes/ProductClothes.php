@@ -2,11 +2,11 @@
 require_once __DIR__ . "/Product.php";
 require_once __DIR__ . "/../data/productData.php";
 
-class ProductTech extends Product
+class ProductClothes extends Product
 {
     protected $brand = "";
     protected $type = "";
-    protected $warranty = "";
+    protected $size = "";
 
     /*  setter e getter BRAND */
     public function setBrand($newBrand)
@@ -31,17 +31,17 @@ class ProductTech extends Product
     }
 
     /* setter e getter WARRANTY */
-    public function setWarranty($newWarranty)
+    public function setSize($newSize)
     {
-        $this->warranty = $newWarranty;
+        $this->size = $newSize;
     }
 
-    public function getWarranty()
+    public function getSize()
     {
-        return $this->warranty;
+        return $this->size;
     }
 
-    public function getProductTech()
+    public function getProductClothes()
     {
         return $this->productName . " " . $this->productPrice . "<br>";
     }
