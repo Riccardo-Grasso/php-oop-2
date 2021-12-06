@@ -1,5 +1,5 @@
 <?php
-$product = [
+$products = [
     [
         "tipologia" => "tech",
         "name" => "IPhone 13",

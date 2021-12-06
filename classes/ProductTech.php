@@ -43,6 +43,6 @@ class ProductTech extends Product
 
     public function getProductTech()
     {
-        return $this->productName . " " . $this->productPrice . "<br>";
+        return  $this->productName . " " . $this->productPrice . "<br>";
     }
 }

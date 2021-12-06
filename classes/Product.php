@@ -6,7 +6,7 @@ class Product
     protected $productPrice = "";
 
 
-    function __construct(string $productName)
+    function __construct($productName)
     {
         $this->setProductName($productName);
     }

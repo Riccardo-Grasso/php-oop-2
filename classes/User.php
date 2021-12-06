@@ -7,7 +7,7 @@ class User
     protected $mail;
     protected $address;
     protected $accountType;
-    protected $cart = [];
+    protected $cart;
 
     function __construct(string $name, string $lastName)
     {
