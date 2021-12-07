@@ -10,7 +10,36 @@ require_once __DIR__ . "/classes/ProductClothes.php";
 $user1 = new UserPremium($utenti[0]["name"], $utenti[0]["lastname"]);
 $user1->setMail($utenti[0]["mail"]);
 $user1->setAddress($utenti[0]["address"]);
-$user1->setCart(
+$user1->cart = [
+
+    $prodotto1 = new ProductTech($products[0]["name"]),
+    $prodotto1->setProductPrice($products[0]["prezzo"]),
+    $prodotto1->setProductTypology($products[0]["tipologia"]),
+    $prodotto1->setBrand($products[0]["marca"]),
+    $prodotto1->setType($products[0]["tipo"]),
+    $prodotto1->setWarranty($products[0]["garanzia"]),
+
+
+    $prodotto2 = new ProductClothes($products[3]["name"]),
+    $prodotto2->setProductPrice($products[3]["prezzo"]),
+    $prodotto2->setProductTypology($products[3]["tipologia"]),
+    $prodotto2->setBrand($products[3]["marca"]),
+    $prodotto2->setType($products[3]["tipo"]),
+    $prodotto2->setSize($products[3]["taglia"]),
+
+
+
+    $prodotto3 = new ProductTech($products[1]["name"]),
+    $prodotto3->setProductPrice($products[1]["prezzo"]),
+    $prodotto3->setProductPrice($products[1]["prezzo"]),
+    $prodotto3->setProductTypology($products[1]["tipologia"]),
+    $prodotto3->setBrand($products[1]["marca"]),
+    $prodotto3->setType($products[1]["tipo"]),
+    $prodotto3->setWarranty($products[1]["garanzia"]),
+
+];
+
+/* $user1->setCart(
     $user1Cart = [
         [
             $prodotto1 = new ProductTech($products[0]["name"]),
@@ -18,7 +47,7 @@ $user1->setCart(
             $prodotto1->setProductTypology($products[0]["tipologia"]),
             $prodotto1->setBrand($products[0]["marca"]),
             $prodotto1->setType($products[0]["tipo"]),
-            /*             var_dump($prodotto1) */
+             var_dump($prodotto1)
         ],
 
         [
@@ -31,9 +60,8 @@ $user1->setCart(
             $prodotto3->setProductPrice($products[1]["prezzo"]),
         ],
     ]
-);
+); */
 
-var_dump($user1->getCart());
 /* echo "<pre>";
 print_r($user1Cart);
 echo "</pre>"; */
@@ -54,7 +82,24 @@ var_dump($user1);
 $user2 = new UserPremium($utenti[1]["name"], $utenti[1]["lastname"]);
 $user2->setMail($utenti[1]["mail"]);
 $user2->setAddress($utenti[1]["address"]);
-/*     $user2->setCart($prodotto = new Product($product["name"])); */
+$user2->cart = [
+
+    $prodotto1 = new ProductTech($products[2]["name"]),
+    $prodotto1->setProductPrice($products[2]["prezzo"]),
+    $prodotto1->setProductTypology($products[2]["tipologia"]),
+    $prodotto1->setBrand($products[2]["marca"]),
+    $prodotto1->setType($products[2]["tipo"]),
+    $prodotto1->setWarranty($products[2]["garanzia"]),
+
+
+    $prodotto2 = new ProductClothes($products[4]["name"]),
+    $prodotto2->setProductPrice($products[4]["prezzo"]),
+    $prodotto2->setProductTypology($products[4]["tipologia"]),
+    $prodotto2->setBrand($products[4]["marca"]),
+    $prodotto2->setType($products[4]["tipo"]),
+    $prodotto2->setSize($products[4]["taglia"]),
+
+];
 $user2->setAccountType($utenti[1]["accountType"]);
 
 /*     var_dump($utente); */
@@ -71,7 +116,24 @@ var_dump($user2);
 $user3 = new UserPremium($utenti[2]["name"], $utenti[2]["lastname"]);
 $user3->setMail($utenti[2]["mail"]);
 $user3->setAddress($utenti[2]["address"]);
-/*     $user3->setCart($prodotto = new Product($product["name"])); */
+$user3->cart = [
+
+    $prodotto1 = new ProductClothes($products[3]["name"]),
+    $prodotto1->setProductPrice($products[3]["prezzo"]),
+    $prodotto1->setProductTypology($products[3]["tipologia"]),
+    $prodotto1->setBrand($products[3]["marca"]),
+    $prodotto1->setType($products[3]["tipo"]),
+    $prodotto1->setSize($products[3]["taglia"]),
+
+
+    $prodotto2 = new ProductClothes($products[4]["name"]),
+    $prodotto2->setProductPrice($products[4]["prezzo"]),
+    $prodotto2->setProductTypology($products[4]["tipologia"]),
+    $prodotto2->setBrand($products[4]["marca"]),
+    $prodotto2->setType($products[4]["tipo"]),
+    $prodotto2->setSize($products[4]["taglia"]),
+
+];
 $user3->setAccountType($utenti[2]["accountType"]);
 
 /*     var_dump($utente); */
@@ -88,7 +150,24 @@ var_dump($user3);
 $user4 = new UserPremium($utenti[3]["name"], $utenti[3]["lastname"]);
 $user4->setMail($utenti[3]["mail"]);
 $user4->setAddress($utenti[3]["address"]);
-/*     $user4->setCart($prodotto = new Product($product["name"])); */
+$user4->cart = [
+
+    $prodotto1 = new ProductClothes($products[5]["name"]),
+    $prodotto1->setProductPrice($products[5]["prezzo"]),
+    $prodotto1->setProductTypology($products[5]["tipologia"]),
+    $prodotto1->setBrand($products[5]["marca"]),
+    $prodotto1->setType($products[5]["tipo"]),
+    $prodotto1->setSize($products[5]["taglia"]),
+
+
+    $prodotto2 = new ProductClothes($products[4]["name"]),
+    $prodotto2->setProductPrice($products[4]["prezzo"]),
+    $prodotto2->setProductTypology($products[4]["tipologia"]),
+    $prodotto2->setBrand($products[4]["marca"]),
+    $prodotto2->setType($products[4]["tipo"]),
+    $prodotto2->setSize($products[4]["taglia"]),
+
+];
 $user4->setAccountType($utenti[3]["accountType"]);
 
 /*     var_dump($utente); */

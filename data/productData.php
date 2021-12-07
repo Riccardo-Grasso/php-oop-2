@@ -24,30 +24,7 @@ $products = [
         "tipo" => "Smartwatch",
         "garanzia" => "12 mesi"
     ],
-    [
-        "tipologia" => "clothes",
-        "name" => "Jeans chiari",
-        "prezzo" => "50€",
-        "marca" => "Levi's",
-        "tipo" => "Pantaloni",
-        "garanzia" => "12 mesi"
-    ],
-    [
-        "tipologia" => "clothes",
-        "name" => "IPhone 13",
-        "prezzo" => "1000€",
-        "marca" => "Apple",
-        "tipo" => "Smartphone",
-        "garanzia" => "12 mesi"
-    ],
-    [
-        "tipologia" => "clothes",
-        "name" => "IPhone 13",
-        "prezzo" => "1000€",
-        "marca" => "Apple",
-        "tipo" => "Smartphone",
-        "taglia" => "L"
-    ],
+
     [
         "tipologia" => "clothes",
         "name" => "Scarpe da corsa",

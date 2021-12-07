@@ -7,7 +7,7 @@ class User
     protected $mail;
     protected $address;
     protected $accountType;
-    protected $cart = [];
+    public $cart = [];
 
     function __construct(string $name, string $lastName)
     {
@@ -72,7 +72,7 @@ class User
     }
 
     /* GETTER E SETTER CART*/
-    public function setCart($newCart)
+    /*     public function setCart($newCart)
     {
         if (is_null($newCart)) {
             return;
@@ -84,7 +84,7 @@ class User
     {
 
         return $this->cart;
-    }
+    } */
 
 
     /*************/
