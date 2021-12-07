@@ -11,15 +11,33 @@ $user1 = new UserPremium($utenti[0]["name"], $utenti[0]["lastname"]);
 $user1->setMail($utenti[0]["mail"]);
 $user1->setAddress($utenti[0]["address"]);
 $user1->setCart(
-    [
+    $user1Cart = [
         [
             $prodotto1 = new ProductTech($products[0]["name"]),
-            $prodotto1->setProductPrice($products[0]["prezzo"])
+            $prodotto1->setProductPrice($products[0]["prezzo"]),
+            $prodotto1->setProductTypology($products[0]["tipologia"]),
+            $prodotto1->setBrand($products[0]["marca"]),
+            $prodotto1->setType($products[0]["tipo"]),
+            /*             var_dump($prodotto1) */
         ],
-        [$prodotto2 = new ProductClothes($products[3]["name"])],
-        [$prodotto3 = new ProductTech($products[1]["name"])],
+
+        [
+            $prodotto2 = new ProductClothes($products[3]["name"]),
+            $prodotto2->setProductPrice($products[3]["prezzo"]),
+        ],
+
+        [
+            $prodotto3 = new ProductTech($products[1]["name"]),
+            $prodotto3->setProductPrice($products[1]["prezzo"]),
+        ],
     ]
 );
+
+var_dump($user1->getCart());
+/* echo "<pre>";
+print_r($user1Cart);
+echo "</pre>"; */
+
 $user1->setAccountType($utenti[0]["accountType"]);
 
 /* var_dump($user1);

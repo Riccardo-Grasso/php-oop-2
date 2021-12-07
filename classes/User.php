@@ -7,7 +7,7 @@ class User
     protected $mail;
     protected $address;
     protected $accountType;
-    protected $cart;
+    protected $cart = [];
 
     function __construct(string $name, string $lastName)
     {
@@ -106,5 +106,10 @@ class User
     public function getUserCompleteName()
     {
         return $this->name . " " . $this->lastName;
+    }
+
+    public function getUserCart()
+    {
+        return $this->cart["name"] . " " . $this->cart["prezzo"];
     }
 }
