@@ -8,6 +8,7 @@ class User
     protected $address;
     protected $accountType;
     public $cart = [];
+    public $pagamento;
 
     function __construct(string $name, string $lastName)
     {
@@ -72,7 +73,7 @@ class User
     }
 
     /* GETTER E SETTER CART*/
-    /*     public function setCart($newCart)
+    public function setCart($newCart = [])
     {
         if (is_null($newCart)) {
             return;
@@ -84,8 +85,22 @@ class User
     {
 
         return $this->cart;
-    } */
+    }
 
+    /* GETTER E SETTER PAGAMENTO*/
+    public function setPagamento($newPagamento)
+    {
+        if (is_null($newPagamento)) {
+            return;
+        }
+        $this->pagamento = $newPagamento;
+    }
+
+    public function getPagamento()
+    {
+
+        return $this->pagamento;
+    }
 
     /*************/
     /* ACCOUNT TYPE */
@@ -101,6 +116,8 @@ class User
     {
         return $this->accountType;
     }
+
+
     /* FUNZIONI */
 
     public function getUserCompleteName()

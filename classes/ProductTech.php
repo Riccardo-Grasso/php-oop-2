@@ -8,6 +8,15 @@ class ProductTech extends Product
     protected $type = "";
     protected $warranty = "";
 
+
+    function __construct($productTypology, $productName, $productPrice, $brand, $type, $warranty)
+    {
+        parent::__construct($this->setProductName($productName), $this->setProductTypology($productTypology), $this->setProductPrice($productPrice));
+        $this->brand = $brand;
+        $this->type = $type;
+        $this->warranty = $warranty;
+    }
+
     /*  setter e getter BRAND */
     public function setBrand($newBrand)
     {
