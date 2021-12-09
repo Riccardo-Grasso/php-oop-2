@@ -13,7 +13,7 @@ function setPayment($val, $type, &$pagamenti)
         } else {
             $pagamenti[] = new PayPal($val, $type);
         }
-        throw new Exception("Numero Carta di Credito non valido, è stato inserito un numero  provvisorio: 0");
+        throw new Exception("Numero Carta di Credito non valido, è stato inserito un numero  provvisorio: 0000 0000 0000 0000");
     } else {
         if ($type == "CC") {
             $pagamenti[] = new CartaDiCredito($val, $type);
@@ -48,7 +48,7 @@ foreach ($numeriCarte as $numero) {
     }
 }
 
-var_dump($pagamenti);
+/* var_dump($pagamenti); */
 /* $pagamenti = [
     new CartaDiCredito("1234567890122375", "12 / 24"),
     new CartaDiCredito("38746278438746324", "03 / 22"),
