@@ -8,6 +8,9 @@ require_once __DIR__ . "/data/paymentList.php";
 
 
 /******************************************************/
+
+
+
 $user1 = new UserPremium($utenti[0]["name"], $utenti[0]["lastname"]);
 $user1->setMail($utenti[0]["mail"]);
 $user1->setAddress($utenti[0]["address"]);
@@ -17,9 +20,13 @@ $user1->setCart(
         $prodotto2 = $prodotti[2],
     ]
 );
-$user1->setPagamento(
-    $metodo1 = $pagamenti[0]
-);
+
+$creditCard1 =
+    $user1->setPagamento(
+        $metodo1 = $pagamenti[0]
+    );
+
+
 $user1->setAccountType($utenti[0]["accountType"]);
 
 var_dump($user1);

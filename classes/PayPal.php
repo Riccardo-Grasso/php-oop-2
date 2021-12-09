@@ -11,6 +11,12 @@ class PayPal extends PaymentMethods
         $this->id = $id;
     }
 
+
+    public function getNumero()
+    {
+        return $this->id;
+    }
+
     /*  public function RandomCardNumber()
     {
         return rand(000000000000, 999999999999);

@@ -11,12 +11,25 @@ class CartaDiCredito extends PaymentMethods
     function __construct($numero, $scadenza)
     {
         parent::__construct("Carta di Credito");
+
+        /*         if (!is_numeric($numero)) {
+            try {
+                throw new Exception("Numero Carta di Credito non valido");
+            } catch (Exception $e) {
+                echo "Errore: " . $e->getMessage();
+            }
+        } */
         $this->numero = $this->cardFormatter($numero);
         $this->scadenza = $scadenza;
     }
 
-    /*  public function RandomCardNumber()
+    public function getNumero()
     {
-        return rand(000000000000, 999999999999);
-    } */
+        return $this->numero;
+    }
+
+    public function getScadenza()
+    {
+        return $this->scadenza;
+    }
 }

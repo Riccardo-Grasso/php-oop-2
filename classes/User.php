@@ -90,9 +90,10 @@ class User
     /* GETTER E SETTER PAGAMENTO*/
     public function setPagamento($newPagamento)
     {
-        if (is_null($newPagamento)) {
+        if (is_null($newPagamento) || $newPagamento->getNumero() < 1) {
             return;
         }
+
         $this->pagamento = $newPagamento;
     }
 
